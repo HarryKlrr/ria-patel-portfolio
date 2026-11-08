@@ -111,7 +111,7 @@ document.querySelectorAll('.viewer[data-src]').forEach((viewer) => {
 
 // ---------- Reveal on scroll ----------
 (() => {
-  document.querySelectorAll('.section__head, .tile, .creds__item, .cta-panel, .story section, .next, .stage, .step, .stat, .compare')
+  document.querySelectorAll('.section__head, .tile, .cred, .cred-mini, .cta-panel, .story section, .next, .stage, .step, .stat, .compare')
     .forEach((el) => { el.classList.add('reveal'); });
   // stagger items that sit side by side
   document.querySelectorAll('.process, .stats, .creds, .bento').forEach((group) => {
