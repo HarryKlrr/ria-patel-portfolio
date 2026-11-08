@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project | Ria Patel</title>
+  <meta name="description" content="Engineering project by Ria Patel, First Class BEng Biomedical Engineering graduate.">
+  <meta property="og:title" content="Ria Patel | Biomedical Engineering projects">
+  <meta property="og:image" content="https://harryklrr.github.io/ria-patel-portfolio/images/og-image.png">
+  <meta property="og:url" content="https://harryklrr.github.io/ria-patel-portfolio/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%2318181b%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Arial%27 font-weight=%27700%27 font-size=%2726%27 fill=%27white%27 text-anchor=%27middle%27%3ERP%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="nav__pill">
+      <a class="nav__brand" href="index.html">Ria Patel</a>
+      <nav class="nav__links" aria-label="Site">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="btn btn--dark btn--sm" href="cv.pdf" download>CV</a>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html#work">Work</a><span aria-hidden="true">/</span><span data-crumb></span>
+    </nav>
+
+    <header class="phead">
+      <div>
+        <p class="label"><span class="label__rule"></span><span data-field></span></p>
+        <h1 class="phead__title" data-title></h1>
+      </div>
+      <div>
+        <p class="phead__summary" data-summary></p>
+        <ul class="pills" data-tags></ul>
+      </div>
+    </header>
+
+    <dl class="pfacts" data-facts></dl>
+    <div class="stats" data-stats></div>
+
+    <div class="stage" data-stage hidden>
+      <div class="stage__inner">
+        <div class="stage__bar" data-stage-bar></div>
+        <div data-stage-body></div>
+      </div>
+    </div>
+
+    <div class="story" data-story></div>
+    <div class="gallery" data-gallery></div>
+    <nav class="next" data-next aria-label="Next project"></nav>
+
+    <section id="contact">
+      <div class="cta-panel">
+        <div>
+          <p class="label label--light">Contact</p>
+          <h2 class="cta-panel__title">Want to talk about this project?</h2>
+          <p class="cta-panel__text">Get in touch for more detail on the design decisions, testing or files.</p>
+        </div>
+        <div class="cta-panel__actions">
+          <a class="btn btn--light" href="mailto:riapatel1000@icloud.com">
+            riapatel1000@icloud.com
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <a class="btn btn--ghost-light" href="https://www.linkedin.com/in/riap07" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--ghost-light" href="cv.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <span>© <span data-year></span> Ria Patel</span>
+    <span>Rotate any 3D model right in your browser</span>
+  </footer>
+
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
+  </script>
+  <script src="projects.js"></script>
+  <script src="project.js"></script>
+  <script src="script.js"></script>
+  <script type="module" src="stl-viewer.js"></script>
+</body>
+</html>

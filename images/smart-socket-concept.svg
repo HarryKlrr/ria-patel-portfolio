@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Figtree, system-ui, sans-serif">
+  <defs>
+    <pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#09090b" stroke-opacity=".05"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#2563eb" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shell" x1="0" x2="1">
+      <stop offset="0" stop-color="#e4e4e7"/>
+      <stop offset=".5" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d4d4d8"/>
+    </linearGradient>
+    <linearGradient id="scale" x1="0" x2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset=".35" stop-color="#22c55e"/>
+      <stop offset=".65" stop-color="#eab308"/>
+      <stop offset="1" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+
+  <rect width="800" height="600" fill="#f4f4f5"/>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <!-- socket, anterior view -->
+  <path d="M262 132 C 300 112, 350 150, 400 150 C 450 150, 500 112, 538 132
+           C 548 210, 530 300, 498 380 C 470 450, 440 492, 400 498
+           C 360 492, 330 450, 302 380 C 270 300, 252 210, 262 132 Z"
+        fill="url(#shell)" stroke="#a1a1aa" stroke-width="2"/>
+  <path d="M262 132 C 300 112, 350 150, 400 150 C 450 150, 500 112, 538 132"
+        fill="none" stroke="#71717a" stroke-width="3"/>
+
+  <!-- pressure blooms -->
+  <g filter="url(#soft)" opacity=".55">
+    <circle cx="400" cy="205" r="34" fill="#22c55e"/>
+    <circle cx="322" cy="250" r="30" fill="#2563eb"/>
+    <circle cx="478" cy="250" r="30" fill="#22c55e"/>
+    <circle cx="400" cy="300" r="30" fill="#ef4444"/>
+    <circle cx="460" cy="330" r="26" fill="#eab308"/>
+    <circle cx="400" cy="450" r="30" fill="#eab308"/>
+  </g>
+
+  <!-- sensor sites -->
+  <g stroke="#ffffff" stroke-width="3">
+    <circle cx="400" cy="205" r="11" fill="#22c55e"/>
+    <circle cx="352" cy="200" r="9" fill="#2563eb"/>
+    <circle cx="448" cy="200" r="9" fill="#2563eb"/>
+    <circle cx="322" cy="250" r="9" fill="#2563eb"/>
+    <circle cx="478" cy="250" r="9" fill="#22c55e"/>
+    <circle cx="400" cy="300" r="11" fill="#ef4444"/>
+    <circle cx="460" cy="330" r="10" fill="#eab308"/>
+    <circle cx="340" cy="330" r="9" fill="#22c55e"/>
+    <circle cx="372" cy="390" r="9" fill="#2563eb"/>
+    <circle cx="428" cy="390" r="9" fill="#22c55e"/>
+    <circle cx="400" cy="450" r="10" fill="#eab308"/>
+    <circle cx="400" cy="485" r="8" fill="#2563eb"/>
+  </g>
+
+  <!-- callouts -->
+  <g font-size="15" fill="#3f3f46" font-weight="500">
+    <path d="M400 205 H 600" stroke="#a1a1aa" stroke-dasharray="3 4"/>
+    <text x="608" y="210">Patellar tendon</text>
+    <path d="M400 300 H 600" stroke="#a1a1aa" stroke-dasharray="3 4"/>
+    <text x="608" y="305">Tibial crest</text>
+    <path d="M460 330 L 600 360" stroke="#a1a1aa" stroke-dasharray="3 4"/>
+    <text x="608" y="365">Fibular head</text>
+    <path d="M400 450 H 600" stroke="#a1a1aa" stroke-dasharray="3 4"/>
+    <text x="608" y="455">Distal end</text>
+  </g>
+
+  <!-- legend -->
+  <g transform="translate(544 112)">
+    <text y="-14" font-size="13" fill="#71717a" letter-spacing="1.5" font-family="Geist Mono, ui-monospace, monospace">INTERFACE PRESSURE</text>
+    <rect width="200" height="10" rx="5" fill="url(#scale)"/>
+    <text y="30" font-size="13" fill="#71717a">Low</text>
+    <text x="200" y="30" font-size="13" fill="#71717a" text-anchor="end">High</text>
+  </g>
+  <text x="744" y="64" text-anchor="end" font-size="13" fill="#71717a" letter-spacing="1.5" font-family="Geist Mono, ui-monospace, monospace">CONCEPT · 12 SENSING SITES</text>
+</svg>
