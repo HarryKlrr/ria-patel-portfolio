@@ -107,7 +107,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero { padding-top: clamp(56px, 9vw, 112px); }
 .hero__top { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 32px 64px; align-items: end; }
 .hero__title { margin-top: 20px; font-size: clamp(2.6rem, 6.6vw, 5.4rem); letter-spacing: -.045em; line-height: 1; }
-.hero__soft { color: #a1a1aa; }
+.hero__soft { color: #63636e; } /* about 5.7:1 on the page background */
 .hero__aside p:first-child { color: var(--fg-2); font-size: 1.05rem; line-height: 1.65; }
 .hero__count { margin-top: 18px; font: 500 .8rem/1 var(--mono); color: var(--fg-3); }
 .hero__count span { margin: 0 6px; color: var(--border); }
@@ -277,6 +277,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .tile--wide { grid-column: span 2; }
 .tile--tall { grid-row: span 2; }
+.tile__sub { margin-top: 10px; padding-top: 14px; border-top: 1px solid var(--border); }
 .jobs { display: grid; gap: 14px; margin-top: 4px; }
 .jobs li { display: grid; gap: 2px; padding-left: 14px; border-left: 2px solid var(--border); }
 .jobs li:first-child { border-color: var(--accent); }
