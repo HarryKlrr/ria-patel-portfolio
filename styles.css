@@ -214,7 +214,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .cred--degree .cred__icon { background: linear-gradient(135deg, #fde68a, #eab308); color: #422006; box-shadow: 0 6px 18px -6px rgba(234, 179, 8, .7); }
 .cred--degree .cred__kicker { color: #fcd34d; }
-.cred--degree .cred__title { font-size: clamp(2.2rem, 4vw, 3.3rem); background: linear-gradient(180deg, #ffffff 30%, #fde68a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+/* solid colours, not gradient text: Safari can drop background-clip:text during the fade-in */
+.cred--degree .cred__title { font-size: clamp(2.2rem, 4vw, 3.3rem); color: #fff; }
+.cred--degree .cred__title span { color: #fde68a; }
 .cred--degree .cred__sub { color: #d4d4d8; }
 .cred--degree .cred__note { color: #a1a1aa; }
 

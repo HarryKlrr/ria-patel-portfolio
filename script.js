@@ -1,4 +1,4 @@
-const ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>';
+const ARROW = '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>';
 const projects = (window.PROJECTS || []).filter((p) => !p.draft);
 const link = (p) => `project.html#${encodeURIComponent(p.id)}`;
 const media = (p) => p.image

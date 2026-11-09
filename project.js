@@ -36,6 +36,15 @@ addEventListener('hashchange', () => location.reload());
     $('[data-stage-bar]').innerHTML = `<span><b>${p.shortTitle || p.title}</b> · interactive 3D model</span><span>${(p.facts && p.facts.Software) || ''}</span>`;
     $('[data-stage-body]').innerHTML =
       `<div class="viewer" data-stl="${p.stl}" data-title="${p.title}, interactive 3D model"></div>`;
+    // if the 3D viewer can't start on this device, show the render instead of an empty box
+    setTimeout(() => {
+      const v = document.querySelector('.viewer[data-stl]');
+      if (v && !v.classList.contains('viewer--stl')) {
+        v.innerHTML = p.image
+          ? `<img src="${p.image}" alt="${p.title}" style="width:100%;height:100%;object-fit:contain;background:#eceef1">`
+          : '<div class="viewer__status">The 3D model couldn’t load on this device.</div>';
+      }
+    }, 8000);
   } else if (p.image) {
     stage.hidden = false;
     $('[data-stage-bar]').innerHTML = `<span><b>${p.shortTitle || p.title}</b>${p.imageCaption ? ` · ${p.imageCaption}` : ''}</span>`;
@@ -70,7 +79,7 @@ addEventListener('hashchange', () => location.reload());
     $('[data-next]').innerHTML = `
       <a href="project.html#${encodeURIComponent(next.id)}">
         <div><p class="label">Next project</p><p class="next__title">${next.title}</p></div>
-        <span class="card__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        <span class="card__arrow"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>`;
   }
 })();
